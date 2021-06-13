@@ -33,14 +33,14 @@
     justify-content: center;
     align-items: center;
 }
-.bking,.bqueen,.brook,.bbishop,.bknight,.bpawn{
+.bpiece{
     width: 60px;
     height: 60px;
     background-color: black;
     border-radius: 50%;
     color: white;
 }
-.wking,.wqueen,.wrook,.wbishop,.wknight,.wpawn{
+.wpiece{
     width: 60px;
     height: 60px;
     background-color: white;

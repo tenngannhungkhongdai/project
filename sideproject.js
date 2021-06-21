@@ -69,12 +69,14 @@ function vitri(){
 function dat(){
     if(gt[1]==1){
         if(di==1){
+            document.getElementById('turn').innerHTML="Lượt:O"
             datx()
             di=0          
             winx()
 
         }
         else if(di==0){
+            document.getElementById('turn').innerHTML="Lượt:X"
             dato()
             di=1           
             wino()
@@ -126,7 +128,15 @@ function winx(){
             break;
         }
     }
-    if(demx>=5){alert('x win')}
+    if(demx>=5){
+        alert('x win')
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',check)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',dat)}
+        for(i=0;i<o.length;i++){o[i].addEventListener('click',pressrestart)}
+        demx=1
+    }
     else{demx=1}
     w=1
     n=0
@@ -164,7 +174,15 @@ function winx(){
             break;
         }
     }
-    if(demx>=5){alert('x win')}
+    if(demx>=5){
+        alert('x win')
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',check)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',dat)}
+        for(i=0;i<o.length;i++){o[i].addEventListener('click',pressrestart)}
+        demx=1
+    }
     else{demx=1}
     w=1
     n=0
@@ -202,7 +220,15 @@ function winx(){
             break;
         }
     }
-    if(demx>=5){alert('x win')}
+    if(demx>=5){
+        alert('x win')
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',check)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',dat)}
+        for(i=0;i<o.length;i++){o[i].addEventListener('click',pressrestart)}
+        demx=1
+    }
     else{demx=1}
     w=1
     n=0
@@ -240,7 +266,15 @@ function winx(){
             break;
         }
     }
-    if(demx>=5){alert('x win')}
+    if(demx>=5){
+        alert('x win')
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',check)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',dat)}
+        for(i=0;i<o.length;i++){o[i].addEventListener('click',pressrestart)}
+        demx=1
+    }
     else{demx=1}
 }
 function wino(){
@@ -280,7 +314,15 @@ function wino(){
             break;
         }
     }
-    if(demo>=5){alert('o win')}
+    if(demo>=5){
+        alert('o win')
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',check)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',dat)}
+        for(i=0;i<o.length;i++){o[i].addEventListener('click',pressrestart)}
+        demo=1
+    }
     else{demo=1}
     w=1
     n=0
@@ -318,7 +360,15 @@ function wino(){
             break;
         }
     }
-    if(demo>=5){alert('o win')}
+    if(demo>=5){
+        alert('o win')
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',check)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',dat)}
+        for(i=0;i<o.length;i++){o[i].addEventListener('click',pressrestart)}
+        demo=1
+    }
     else{demo=1}
     w=1
     n=0
@@ -356,7 +406,15 @@ function wino(){
             break;
         }
     }
-    if(demo>=5){alert('o win')}
+    if(demo>=5){
+        alert('o win')
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',check)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',dat)}
+        for(i=0;i<o.length;i++){o[i].addEventListener('click',pressrestart)}
+        demo=1
+    }
     else{demo=1}
     w=1
     n=0
@@ -394,16 +452,33 @@ function wino(){
             break;
         }
     }
-    if(demo>=5){alert('o win')}
+    if(demo>=5){
+        alert('o win')
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',check)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',vitri)}
+        for(i=0;i<o.length;i++){o[i].removeEventListener('click',dat)}
+        for(i=0;i<o.length;i++){o[i].addEventListener('click',pressrestart)}
+        demo=1
+    }
     else{demo=1}
 }
 document.getElementById('restart').addEventListener('click',restart)
 function restart(){
     for(i=0;i<o.length;i++){o[i].innerHTML=''}
+    for(i=0;i<o.length;i++){o[i].addEventListener('click',check)}
+    for(i=0;i<o.length;i++){o[i].addEventListener('click',vitri)}
+    for(i=0;i<o.length;i++){o[i].addEventListener('click',vitri)}
+    for(i=0;i<o.length;i++){o[i].addEventListener('click',dat)}
+    for(i=0;i<o.length;i++){o[i].removeEventListener('click',pressrestart)}
+    document.getElementById('turn').innerHTML="Lượt:X"
     t=0
     demx=1
     demo=1
     quanx=[]
     quano=[]
     di=1
+}
+function pressrestart(){
+    alert('press restart')
 }
